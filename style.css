@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+main{}
+
+#app{
+    height: 100vh;
+    width: 100%;
+    background: #202124;
+}
+
+.list-container{
+    width: 1200px;
+    margin: auto;
+    background: #313235;
+    
+}
+
+li {
+    color: whitesmoke;
+    list-style: none;
+    width: 400px;
+    padding: 30px;
+}
+
+li img {
+    width: 50px;
+    margin: 10px;
+}
+
+li:hover{
+    background: #464647;
+    transition: .5s;
+}
+
+
+/* .chat{
+    float: right;
+    width: 500px;
+    height: 500px;
+    background: #464647;
+} */
