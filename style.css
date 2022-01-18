@@ -21,20 +21,25 @@ main{}
 }
 
 li {
+    display: block;
     color: whitesmoke;
     list-style: none;
     width: 400px;
-    padding: 30px;
+    padding: 20px;
+    transition: .5s;
+    cursor: pointer;
 }
 
 li img {
     width: 50px;
     margin: 10px;
+    border-radius: 100%;
 }
 
 li:hover{
     background: #464647;
     transition: .5s;
+    width: 405px;
 }
 
 
