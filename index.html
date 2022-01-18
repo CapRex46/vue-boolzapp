@@ -14,11 +14,11 @@
         <div class="list-container">
             <ul>
                 <li v-for="item in contacts">
-                    <img src="img/avatar_1.jpg" >{{item.name}}
+                    <img :src=" 'img/avatar' + item.avatar + '.jpg'">{{item.name}}
                 </li>
             </ul>
             <div class="chat">
-
+                
             </div>
         </div>
     </div>
