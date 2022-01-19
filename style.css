@@ -53,14 +53,21 @@ main{}
 .chatUsername{
     display: flex;
     align-items: center;
+    color: whitesmoke;
 }
 
 .chatUsername img{
     width: 50px;
     border-radius: 100%;
     margin: 30px;
+    transition: .2s;
 }
 
+.chatUsername img:hover{
+    box-shadow: 0 0 21px rgba(5, 5, 5, 0.281);
+    cursor: pointer;
+    transition: .2s;
+}
 
 
 
@@ -92,7 +99,6 @@ main{}
 }
 
 li {
-
     color: whitesmoke;
     list-style: none;
     width: 400px;
@@ -114,10 +120,46 @@ li:hover{
 }
 
 
-
 .chat{
+    display: flex;
+    align-items: flex-end;
     width: 100%;
     background: url("img/boolzap_dark.jpg");
     background-size: contain;
+    color: whitesmoke;
 }
 
+
+.msgout{
+    width: 300px;
+    background: #262D31;
+    box-shadow: 0 0 21px rgb(0, 0, 0);
+    margin-bottom: 150px;
+    margin-left: 30px;
+    padding: 20px;
+    border-radius: 3px 30px 30px;
+}
+
+.msgin{
+    width: 300px;
+    background: #056162;
+    box-shadow: 0 0 21px rgb(0, 0, 0);
+    margin-bottom: 50px;
+    margin-left: 30px;
+    padding: 20px;
+    border-radius: 30px 30px 3px;
+}
+
+.inputchat{
+    position: absolute;
+    background: #262D31;
+}
+
+input[type=text] {
+    width: 100%;
+
+    margin: 8px 0;
+    box-sizing: border-box;
+    background:#4c4e50;
+    border-radius: 4px;
+  }
