@@ -42,6 +42,7 @@ main{}
     box-shadow: 0 0 21px rgba(5, 5, 5, 0.281);
     transition: .5s; 
     cursor: pointer;
+    font-weight: bold;
 }
 
 .username .fas{
@@ -86,8 +87,7 @@ main{}
 
 .mainchat{
     display: flex;
-    align-content: space-around;
-
+    align-content: space-around
 }
 
 .list-container{
@@ -108,57 +108,92 @@ li {
 
 li img {
     width: 50px;
-    margin: 10px;
     border-radius: 100%;
+    margin: 10px;
 }
+
+
 
 li:hover{
     background: #464647;
     transition: .5s;
     width: 410px;
+    font-weight: bold;
+}
+
+.name{
+    margin: 10px;
+}
+
+.date{
+    font-size: 12px;
+    text-align: right;
 }
 
 
-.chat{
-    display: flex;
-    align-items: flex-end;
-    width: 100%;
+.message-area{
+    width: 90%;
     background: url("img/boolzap_dark.jpg");
     background-size: contain;
     color: whitesmoke;
 }
 
+.input-area{
+    width: 10%;
+}
 
-.message-received{
+.input-area input{
+    height: 100%;
+    width: 100%;
+}
+
+
+.message::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.message.sent > .message-item{
+    float: right;
+    background: #056162;
+    box-shadow: 0 0 21px rgb(0, 0, 0);
+    margin: 20px;
+    width: 300px;
+    padding: 20px;
+    border-radius: 20px 20px 3px;
+}
+
+.message.received > .message-item{
+    float: left;
+    background: #262D31;
+    box-shadow: 0 0 21px rgb(0, 0, 0);
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+    border-radius: 3px 20px 20px;
+}
+
+
+
+/* .message-received{
     width: 300px;
     background: #262D31;
     box-shadow: 0 0 21px rgb(0, 0, 0);
-    margin-bottom: 150px;
-    margin-left: 30px;
-    padding: 20px;
-    border-radius: 3px 30px 30px;
 }
+
 
 .message-sent{
     width: 300px;
     background: #056162;
     box-shadow: 0 0 21px rgb(0, 0, 0);
-    margin-bottom: 50px;
-    margin-left: 30px;
-    padding: 20px;
-    border-radius: 30px 30px 3px;
-}
+} */
 
-.inputchat{
-    position: absolute;
-    background: #262D31;
-}
-
-input[type=text] {
+/* input[type=text] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     background:#4c4e50;
     border-radius: 4px;
-  }
+  } */

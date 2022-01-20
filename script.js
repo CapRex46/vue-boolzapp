@@ -91,19 +91,22 @@ new Vue ({
         tempMessage: '',
     },
     methods:{
+        getAvatarPic(contact) {
+            return `img/avatar${contact.avatar}.jpg`
+        },
         setCurrentContact(index) {
             this.currentIndex = index;
         },
-        sendMessage(contact) {
+        sendMessageTo(contact) {
             contact.messages.push({
                 date: day.js().format('DD/MM/YYYY HH:mm:ss'),
-                text: 'this.tempMessage',
-                status: 'sent'
+                text: this.tempMessage,
+                status: 'sent',
             })
-            this.tempMessage= '';
-            setTimeout(() => {
-                this.autoReply(contact)
-            }, 1000)
+            this.tempMessage = '';
+            setTimeout(() =>{
+                this.autoReply(contact);
+            },1000)
         },
         autoReply(contact){
             contact.messages.push({
@@ -124,10 +127,4 @@ new Vue ({
 
 
 
-
-
-    // methods:{
-    //     getAvatarPic(contact) {
-    //         return `img/avatar${contact.avatar}.jpg`
-    //     }
-    // }
+ 
