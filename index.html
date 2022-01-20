@@ -35,20 +35,27 @@
                     </li>
                     </ul>
                 </div>
-                <div class="message-area">
-                    <div class="message" v-for="message in contacts[currentIndex].messages"
-                    :class="message.status">
-                        <div class="message-item">
-                            {{message.text}}
-                            <div class="date">
-                                {{message.date}}
+
+                <div class="msgarea">
+                    <div class="message-area">
+                        <div class="message" v-for="message in contacts[currentIndex].messages"
+                        :class="message.status">
+                            <div class="message-item">
+                                {{message.text}}
+                                <div class="date">
+                                    {{message.date}}
+                                </div>
                             </div>
                         </div>
                     </div>
+    
+    
+                    <div class="input-area">
+                        <input placeholder="Scrivi il tuo messaggio" v-model="tempMessage" @keyup.enter="sendMessageTo(contacts[currentIndex])">
+                    </div>
                 </div>
-                <div class="input-area">
-                    <input v-model="tempMessage" @keyup.enter="sendMessageTo(contacts[currentIndex])">
-                </div>
+
+
 
 
             </div>
@@ -56,5 +63,6 @@
         </div>
     </div>
     <script src="script.js"></script>
+    <script>dayjs().format()</script>
 </body>
 </html>

@@ -99,7 +99,7 @@ new Vue ({
         },
         sendMessageTo(contact) {
             contact.messages.push({
-                date: day.js().format('DD/MM/YYYY HH:mm:ss'),
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 text: this.tempMessage,
                 status: 'sent',
             })
@@ -110,7 +110,7 @@ new Vue ({
         },
         autoReply(contact){
             contact.messages.push({
-                date: day.js().format('DD/MM/YYYY HH:mm:ss'),
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 text: 'ok',
                 status: 'received'
             })
