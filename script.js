@@ -86,6 +86,48 @@ new Vue ({
                     }
                 ],
             },
-        ]
+        ],
+        currentIndex: 0,
+        tempMessage: '',
+    },
+    methods:{
+        setCurrentContact(index) {
+            this.currentIndex = index;
+        },
+        sendMessage(contact) {
+            contact.messages.push({
+                date: day.js().format('DD/MM/YYYY HH:mm:ss'),
+                text: 'this.tempMessage',
+                status: 'sent'
+            })
+            this.tempMessage= '';
+            setTimeout(() => {
+                this.autoReply(contact)
+            }, 1000)
+        },
+        autoReply(contact){
+            contact.messages.push({
+                date: day.js().format('DD/MM/YYYY HH:mm:ss'),
+                text: 'ok',
+                status: 'received'
+            })
+        }
     }
+
 });
+
+
+
+
+
+
+
+
+
+
+
+    // methods:{
+    //     getAvatarPic(contact) {
+    //         return `img/avatar${contact.avatar}.jpg`
+    //     }
+    // }
