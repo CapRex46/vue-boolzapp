@@ -256,7 +256,7 @@ input {
     color: whitesmoke;
     border: none;
     box-shadow: 0 0 21px rgba(5, 5, 5, 0.281);
-    border-radius: 13px;
+    border-radius: 5px;
     transition: .5s;
     
   }
