@@ -134,6 +134,37 @@ li:hover{
     text-align: right;
 }
 
+.notifications{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    background: lightblue;
+}
+
+.winnotify{
+    font-size: 12px;
+}
+
+.iconbox{
+    width: 50px;
+    height: 50px;
+    background: lightgray;
+    margin: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 21px rgba(5, 5, 5, 0.281);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.iconbox:hover{
+    box-shadow: 0 0 51px rgba(5, 5, 5, 0.281);
+    transition: .5s;
+}
+
+.fa-bell-slash{
+    padding: 15px;
+}
 
 .message-area{
     width: 100%;
@@ -182,13 +213,13 @@ div.message-area::-webkit-scrollbar-thumb:hover{
 }
 
 
-.fas{
+#smiles{
     margin: 30px;
     transition: .5s;
     box-shadow: 0 0 21px rgba(5, 5, 5, 0.281);
 }
 
-.fas:hover{
+#smiles:hover{
     box-shadow: 0 0 40px #056162;
     transition: .5s;
     cursor: pointer;

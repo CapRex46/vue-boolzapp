@@ -34,7 +34,19 @@
                         <div class="name">{{contact.name}}</div>
                     </li>
                     </ul>
-                </div>
+                    <div class="notifications">
+                        <div class="iconbox">
+                            <i class="fas fa-bell-slash"></i>
+                        </div>
+                        
+                        <div>
+                            Ricevi notifice di nuovi messaggi
+                            <div class="winnotify">Attiva le notifiche su Windows</div>
+                        </div>
+                        
+                    </div>
+                </div> 
+
 
                 <div class="msgarea">
                     <div class="message-area">
@@ -51,9 +63,9 @@
     
     
                     <div class="input-area">
-                        <i class="fas fa-smile" style="color: whitesmoke;"></i>
+                        <i id="smiles" class="fas fa-smile" style="color: whitesmoke;"></i>
                         <input placeholder="  Scrivi il tuo messaggio" v-model="tempMessage" @keyup.enter="sendMessageTo(contacts[currentIndex])">
-                        <i class="fas fa-microphone" style="color: whitesmoke;"></i>
+                        <i id="smiles"class="fas fa-microphone" style="color: whitesmoke;"></i>
                     </div>
                 </div>
 
